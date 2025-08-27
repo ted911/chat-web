@@ -2,11 +2,12 @@
   "name": "chat-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ted911.github.io/chat-web.git",
+  "homepage": "https://ted911.github.io/chat-web",
   "scripts": {
     "dev": "bun --hot src/index.tsx",
     "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
     "start": "NODE_ENV=production bun src/index.tsx",
+    "predeploy": "bun run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
